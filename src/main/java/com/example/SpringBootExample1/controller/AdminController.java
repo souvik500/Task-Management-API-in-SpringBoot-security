@@ -20,10 +20,7 @@ public class AdminController {
 
     @PostMapping("/add")
     public String addAdmin(@RequestBody UserRequestDTO userRequestDTO){
-
-
-
-        return adminService.addAdmin(userRequestDTO, Role.ROLE_Admin);
+         return adminService.addAdmin(userRequestDTO, Role.ROLE_Admin);
     }
 
     @GetMapping("/find/all/task")

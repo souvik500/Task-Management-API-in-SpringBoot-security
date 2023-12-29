@@ -35,21 +35,21 @@ public class AdminServiceImpl implements AdminService {
     public String addAdmin(UserRequestDTO userRequestDTO, Role role) {
         System.out.println(userRequestDTO +","+ role);
 
-//        User user = User.builder()
-//                .userName(userRequestDTO.getUserName())
-//                .email(userRequestDTO.getEmail())
-//                .password(new BCryptPasswordEncoder().encode(userRequestDTO.getPassword()))
-//                .role(role)
-//                .login(false)
-//                .build();
-
-        Admin admin = Admin.builder()
-                .username(userRequestDTO.getUserName())
-                .password(userRequestDTO.getPassword())
+        User user = User.builder()
+                .userName(userRequestDTO.getUserName())
+                .email(userRequestDTO.getEmail())
+                .password(new BCryptPasswordEncoder().encode(userRequestDTO.getPassword()))
+                .role(role)
+                .login(false)
                 .build();
 
-//        userRepository.save(user);
-        return "Congratulations! "+ admin.getUsername()+" you have successfully registered!";
+//        Admin admin = Admin.builder()
+//                .username(userRequestDTO.getUserName())
+//                .password(userRequestDTO.getPassword())
+//                .build();
+
+        userRepository.save(user);
+        return "Congratulations! "+ user.getUserName()+" you have successfully registered!";
     }
     @Override
     public List<TaskManagementResponseDTO> findAllTask() {
