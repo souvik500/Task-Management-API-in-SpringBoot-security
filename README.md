@@ -94,12 +94,9 @@ Authentication is implemented using an Authentication Token class. This token is
 Encryption
 Authentication is implemented using an Authentication Token class. This token is generated upon successful sign-in and must be included in the headers of subsequent requests to authorized endpoints.
 
-Project Summary
+[] Project Summary
 Aim :- This is basically good project for learning purpose springBoot basics, Mappings, Annotation, API, spring mvc and CRUD Operation, swagger, crud Repository inbuilt method, and Custom Finder and Custom Query. In this project i just add Posts, get all psots a particular user, update User inforamtion lot of things i learned from this project.
-👨‍💻 Sameer
-Twitter: @Sameer.twitter
 
-Github: @Sameer-Github
 
 🤝 Contributing
 
